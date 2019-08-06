@@ -1,0 +1,13 @@
+---
+- hosts: clients
+  become: yes
+  become_user: root
+  become_method: su
+  tasks:
+  - name: Update server
+    apt:
+      name:
+      - update_cache: yes
+      - upgrade: full
+
+

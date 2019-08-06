@@ -1,0 +1,9 @@
+---
+- hosts: clients
+  become: true
+  task:
+  - name: Update Server
+    apt:
+      name:
+      - update_cache: yes
+      - upgrade: full
